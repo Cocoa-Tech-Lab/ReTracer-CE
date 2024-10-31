@@ -1,0 +1,37 @@
+[versions]
+kotlin = "2.0.10"
+kotlinx-rpc = "0.3.0"
+ktor = "3.0.1"
+jetbrains-compose = "1.6.10"
+
+[libraries]
+# kotlinx-rpc
+kotlinx-rpc-krpc-client = { module = "org.jetbrains.kotlinx:kotlinx-rpc-krpc-client" }
+kotlinx-rpc-krpc-ktor-client = { module = "org.jetbrains.kotlinx:kotlinx-rpc-krpc-ktor-client" }
+
+kotlinx-rpc-core = { module = "org.jetbrains.kotlinx:kotlinx-rpc-core" }
+kotlinx-rpc-krpc-server = { module = "org.jetbrains.kotlinx:kotlinx-rpc-krpc-server" }
+kotlinx-rpc-krpc-ktor-server = { module = "org.jetbrains.kotlinx:kotlinx-rpc-krpc-ktor-server" }
+kotlinx-rpc-krpc-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-rpc-krpc-serialization-core" }
+kotlinx-rpc-krpc-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-rpc-krpc-serialization-protobuf" }
+
+
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor"}
+ktor-server-auth = { module = "io.ktor:ktor-server-auth" }
+ktor-server-cio = { module = "io.ktor:ktor-server-cio" }
+ktor-server-compression = { module = "io.ktor:ktor-server-compression" }
+ktor-server-config-yaml = { module = "io.ktor:ktor-server-config-yaml" }
+ktor-server-core = { module = "io.ktor:ktor-server-core" }
+ktor-server-default-headers = { module = "io.ktor:ktor-server-default-headers" }
+ktor-server-host-common = { module = "io.ktor:ktor-server-host-common" }
+ktor-server-resources = { module = "io.ktor:ktor-server-resources" }
+ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages" }
+
+
+[plugins]
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinSerialization = { id="org.jetbrains.kotlin.plugin.serialization", version.ref="kotlin" }
+ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
+kotlinx-rpc = { id = "org.jetbrains.kotlinx.rpc.plugin", version.ref = "kotlinx-rpc" }
+jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "jetbrains-compose" }
+kotlinCompose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
